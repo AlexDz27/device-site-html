@@ -16,32 +16,40 @@
     <h1 class="visually-hidden">DEVICE - магазин техники и гаджетов</h1>
 
     <nav class="header-nav">
-      <a href="index.html" class="logo-link">DEVICE</a>
+      <div class="header-nav__logo-container">
+        <a href="index.html" class="logo-link">DEVICE</a>
+      </div>
 
-      <div class="wrapper">
+      <div class="wrapper header-nav__interactions">
 
-        <form class="search-form header__search-form" method="get" action="index.html">
-          <button class="search-form__btn" type="submit"><span class="visually-hidden">Поиск</span></button>
-          <input class="search-form__input" name="search" id="search" placeholder="Поиск по сайту">
-        </form>
-
-        <div class="authentication">
-          <a class="authentication__link" href="#">Войти</a>
+        <div class="interactions__wrapper">
+          <form class="search-form header__search-form" method="get" action="index.html">
+            <button class="search-form__btn" type="submit"><span class="visually-hidden">Поиск</span></button>
+            <input class="search-form__input" name="search" id="search" placeholder="Поиск по сайту">
+          </form>
         </div>
 
-        <div class="compare">
-          <a class="compare__link" href="#">Сравнить</a>
+        <div class="interactions__wrapper">
+          <div class="authentication">
+            <a class="authentication__link" href="#">Войти</a>
+          </div>
         </div>
 
-        <div class="cart">
-          <a class="cart__link" href="#">Корзина</a>
+        <div class="interactions__wrapper">
+          <div class="compare">
+            <a class="compare__link" href="#">Сравнить</a>
+          </div>
+
+          <div class="cart">
+            <a class="cart__link" href="#">Корзина</a>
+          </div>
         </div>
 
       </div>
 
       <div class="wrapper">
 
-        <ul class="nav-list">
+        <ul class="nav-list header-nav__nav-list-wrapper">
           <li class="nav-list__item catalog-tab">
             <a class="nav-list__link big-link" href="#">Каталог товаров</a>
           </li>
@@ -62,64 +70,66 @@
 </header>
 
 <main class="main">
-  <section class="featured container">
-    <h2 class="visually-hidden">Предлагаемые товары</h2>
-
-    <div class="wrapper">
-
-      <img class="featured-item-img" src="img/self-palka.png" alt="Название товара 1">
-
-    </div>
-    <div class="wrapper">
-
-      <ul class="featured-items-list">
-        <li class="featured-items-list__item">
-          <span class="featured-items-list__count">01</span>
-          <b class="featured-items-list__cta">Делай селфи,<br> как Бен Стиллер!</b>
-          <p class="featured-items-list__desc">
-            Самая длинная палка для селфи доступна в нашем магазине.
-            Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-          </p>
-        </li>
-      </ul>
+  <section class="featured">
+    <div class="container">
+      <h2 class="visually-hidden">Предлагаемые товары</h2>
 
       <div class="wrapper">
 
-        <a href="#" class="big-link big-link__strike">Подробнее</a>
-        <ul class="featured-items-toggles-list">
-          <li class="featured-items-toggles-list__item">
-            <label for="item-1">Товар 1</label>
-            <input type="radio" id="item-1" name="featured-items-slider" value="item-1">
-          </li>
-          <li class="featured-items-toggles-list__item">
-            <label for="item-2">Товар 2</label>
-            <input type="radio" id="item-2" name="featured-items-slider" value="item-2">
-          </li>
-          <li class="featured-items-toggles-list__item">
-            <label for="item-3">Товар 3</label>
-            <input type="radio" id="item-3" name="featured-items-slider" value="item-3">
+        <img class="featured-item-img" src="img/self-palka.png" alt="Название товара 1">
+
+      </div>
+      <div class="wrapper">
+
+        <ul class="featured-items-list">
+          <li class="featured-items-list__item">
+            <span class="featured-items-list__count">01</span>
+            <b class="featured-items-list__cta">Делай селфи,<br> как Бен Стиллер!</b>
+            <p class="featured-items-list__desc">
+              Самая длинная палка для селфи доступна в нашем магазине.
+              Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+            </p>
           </li>
         </ul>
 
-        <div class="wrapper">
+        <div class="wrapper cta-toggles-wrapper">
 
-          <table class="featured-item-info">
-            <tr>
-              <td>8,5 м</td>
-              <td>5 кг</td>
-              <td>Карбон</td>
-            </tr>
-            <tr>
-              <th>Длина палки</th>
-              <th>Вес палки</th>
-              <th>Материал</th>
-            </tr>
-          </table>
+          <a href="#" class="big-link big-link--strike">Подробнее</a>
+          <ul class="featured-items-toggles-list">
+            <li class="featured-items-toggles-list__item">
+              <label for="item-1">Товар 1</label>
+              <input type="radio" id="item-1" name="featured-items-slider" value="item-1">
+            </li>
+            <li class="featured-items-toggles-list__item">
+              <label for="item-2">Товар 2</label>
+              <input type="radio" id="item-2" name="featured-items-slider" value="item-2">
+            </li>
+            <li class="featured-items-toggles-list__item">
+              <label for="item-3">Товар 3</label>
+              <input type="radio" id="item-3" name="featured-items-slider" value="item-3">
+            </li>
+          </ul>
 
         </div>
 
-      </div>
+          <div class="wrapper">
 
+            <table class="featured-item-info">
+              <tr class="featured-item-info__titles">
+                <th>Длина палки</th>
+                <th>Вес палки</th>
+                <th>Материал</th>
+              </tr>
+              <tr class="featured-item-info__content">
+                <td>8,5 м</td>
+                <td>5 кг</td>
+                <td>Карбон</td>
+              </tr>
+            </table>
+
+          </div>
+
+      </div>
     </div>
   </section>
 
@@ -137,7 +147,7 @@
       </li>
       <li class="categories-list__item">
         <a class="categories-list__link" href="#">
-          <div class="categories-list__img-container">
+          <div class="categories-list__img-container categories-list__img-container--selfie">
             <img src="img/popular-2.svg" alt="Категория моноподы для селфи" class="categories-list__img">
           </div>
           <p class="categories-list__desc">Моноподы для селфи</p>
@@ -226,7 +236,7 @@
     </ul>
   </section>
 
-  <div class="wrapper container">
+  <div class="wrapper container about-us-contacts-wrapper">
     <section class="about-us">
       <h2 class="heading">О нас</h2>
 
@@ -238,7 +248,7 @@
         Мы можем доставить ваш товар в самые отдаленные точки России!
         DEVICE работает со многими транспортными компаниями:
       </p>
-      <ul class="list">
+      <ul class="list about-us__delivery-list">
         <li class="list__item">
           <b>Деловые Линии</b>
         </li>
@@ -250,7 +260,7 @@
         </li>
       </ul>
 
-      <a href="#" class="big-link big-link__strike">Подробнее о нас</a>
+      <a href="#" class="big-link big-link--strike about-us__cta-link">Подробнее о нас</a>
     </section>
 
     <section class="contacts">
@@ -261,9 +271,9 @@
         Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
       </p>
 
-      <img src="img/map.jpg" alt="Ул. Большая Конюшенная 18">
+      <img class="contacts__map" src="img/map.jpg" alt="Ул. Большая Конюшенная 18">
 
-      <a href="#" class="big-link big-link__strike">Напишите нам</a>
+      <a href="#" class="big-link big-link--strike contacts__cta-link">Напишите нам</a>
     </section>
   </div>
 </main>
@@ -273,16 +283,18 @@
     <div class="wrapper">
       <a href="index.html" class="logo-link footer__logo-link">DEVICE</a>
 
-      <div class="authentication">
-        <a class="authentication__link" href="#">Войти</a>
-      </div>
+      <div class="footer__user-interactions">
+        <div class="authentication">
+          <a class="authentication__link" href="#">Войти</a>
+        </div>
 
-      <div class="compare">
-        <a class="compare__link" href="#">Сравнить</a>
-      </div>
+        <div class="compare">
+          <a class="compare__link" href="#">Сравнить</a>
+        </div>
 
-      <div class="cart">
-        <a class="cart__link" href="#">Корзина</a>
+        <div class="cart">
+          <a class="cart__link" href="#">Корзина</a>
+        </div>
       </div>
     </div>
 
