@@ -365,12 +365,27 @@ input[type="radio"].visually-hidden {
   margin-bottom: 40px;
 }
 
+.featured-items-list__item {
+  position: relative;
+  padding-top: 56px;
+}
+
 .featured-items-list__cta {
   font-family: "Gilroy", "Open Sans", sans-serif;
   font-size: 47px;
   line-height: 56px;
   font-weight: bold;
   color: #000;
+  position: relative;
+}
+.featured-items-list__cta::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 6px;
+  background-color: #fff;
+  position: absolute;
+  top: -39px;
 }
 
 .featured-items-list__count {
@@ -378,9 +393,10 @@ input[type="radio"].visually-hidden {
   line-height: 179px;
   font-family: "Gilroy", "Open Sans", sans-serif;
   font-weight: bold;
-  /*color: #ffffff;*/
-  /* todo: change to fff */
-  color: #ccc;
+  color: #ffffff;
+  position: absolute;
+  right: -13px;
+  top: -41px;
 }
 
 .cta-toggles-wrapper {
