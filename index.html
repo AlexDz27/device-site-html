@@ -14,6 +14,7 @@
 <header class="header">
   <div class="container">
     <div class="decorative-bg"></div>
+    <div class="decorative-bg catalog-tab__decorative-bg"></div>
 
     <h1 class="visually-hidden">DEVICE - магазин техники и гаджетов</h1>
 
@@ -25,9 +26,14 @@
       <div class="wrapper header-nav__interactions">
 
         <div class="interactions__wrapper">
-          <form class="search-form header__search-form" method="get" action="index.html">
-            <button class="search-form__btn" type="submit"><span class="visually-hidden">Поиск</span></button>
-            <input class="search-form__input" name="search" id="search" placeholder="Поиск по сайту">
+          <form class="search-form header__search-form header__search-form-js" method="get"
+                action="index.html">
+            <button class="search-form__btn-icon" type="submit">
+              <span class="visually-hidden">Поиск</span>
+            </button>
+            <input class="search-form__input header__search-form-input-js" name="search" id="search"
+                   placeholder="Поиск по сайту">
+            <button class="search-form__btn search-form__btn--unactive" type="submit">Найти</button>
           </form>
         </div>
 
@@ -53,7 +59,7 @@
 
         <ul class="nav-list header-nav__nav-list-wrapper">
           <li class="nav-list__item catalog-tab-wrapper">
-            <a class="nav-list__link big-link catalog-tab" href="#">Каталог товаров</a>
+            <a class="nav-list__link big-link catalog-tab catalog-tab-js" href="#">Каталог товаров</a>
             <ul class="catalog-menu">
               <li class="catalog-menu__item">
                 <a href="#">Виртуальная реальность</a>
@@ -119,16 +125,26 @@
           <a href="#" class="big-link big-link--strike">Подробнее</a>
           <ul class="featured-items-toggles-list">
             <li class="featured-items-toggles-list__item">
-              <label for="item-1">Товар 1</label>
-              <input type="radio" id="item-1" name="featured-items-slider" value="item-1">
+              <label class="featured-items-toggles-list__item-label">
+                <span class="visually-hidden">Товар 1</span>
+                <input class="featured-items-toggles-list__input" type="radio" checked name="featured-items-slider"
+                       value="item-1">
+                <span class="featured-items-toggles-list__toggle"></span>
+              </label>
             </li>
             <li class="featured-items-toggles-list__item">
-              <label for="item-2">Товар 2</label>
-              <input type="radio" id="item-2" name="featured-items-slider" value="item-2">
+              <label class="featured-items-toggles-list__item-label">
+                <span class="visually-hidden">Товар 2</span>
+                <input class="featured-items-toggles-list__input" type="radio" name="featured-items-slider" value="item-2">
+                <span class="featured-items-toggles-list__toggle"></span>
+              </label>
             </li>
             <li class="featured-items-toggles-list__item">
-              <label for="item-3">Товар 3</label>
-              <input type="radio" id="item-3" name="featured-items-slider" value="item-3">
+              <label class="featured-items-toggles-list__item-label">
+                <span class="visually-hidden">Товар 3</span>
+                <input class="featured-items-toggles-list__input" type="radio" name="featured-items-slider" value="item-3">
+                <span class="featured-items-toggles-list__toggle"></span>
+              </label>
             </li>
           </ul>
 
@@ -240,20 +256,28 @@
 
     <ul class="companies-list">
       <li class="companies-list__item">
-        <img src="img/logo-1.png" alt="djl">
-        <img src="img/logo-1-red.png" alt="djl">
+        <a href="javascript:void(0);" class="companies-list__item-link">
+          <img src="img/logo-1.png" alt="djl">
+          <img src="img/logo-1-red.png" alt="djl">
+        </a>
       </li>
       <li class="companies-list__item">
-        <img src="img/logo-2.jpg" alt="spgadgets">
-        <img src="img/logo-2-active.jpg" alt="spgadgets">
+        <a href="javascript:void(0);" class="companies-list__item-link">
+          <img src="img/logo-2.jpg" alt="spgadgets">
+          <img src="img/logo-2-active.jpg" alt="spgadgets">
+        </a>
       </li>
       <li class="companies-list__item">
-        <img src="img/logo-3.jpg" alt="go-pro">
-        <img src="img/logo-3-active.jpg" alt="go-pro">
+        <a href="javascript:void(0);" class="companies-list__item-link">
+          <img src="img/logo-3.jpg" alt="go-pro">
+          <img src="img/logo-3-active.jpg" alt="go-pro">
+        </a>
       </li>
       <li class="companies-list__item">
-        <img src="img/logo-4.jpg" alt="vive">
-        <img src="img/logo-4-active.jpg" alt="vive">
+        <a href="javascript:void(0);" class="companies-list__item-link">
+          <img src="img/logo-4.jpg" alt="vive">
+          <img src="img/logo-4-active.jpg" alt="vive">
+        </a>
       </li>
     </ul>
   </section>
