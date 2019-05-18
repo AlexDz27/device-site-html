@@ -14,7 +14,7 @@
 <header class="header">
   <div class="container">
     <div class="decorative-bg"></div>
-    <div class="decorative-bg catalog-tab__decorative-bg"></div>
+    <div class="decorative-bg catalog-tab__decorative-bg js-catalog-tab__decorative-bg catalog-tab__decorative-bg--inactive"></div>
 
     <h1 class="visually-hidden">DEVICE - магазин техники и гаджетов</h1>
 
@@ -49,7 +49,7 @@
           </div>
 
           <div class="cart">
-            <a class="cart__link" href="#">Корзина</a>
+            <a class="cart__link js-catalog-menu-nav-start" href="#">Корзина</a>
           </div>
         </div>
 
@@ -59,30 +59,44 @@
 
         <ul class="nav-list header-nav__nav-list-wrapper">
           <li class="nav-list__item catalog-tab-wrapper">
-            <a class="nav-list__link big-link catalog-tab catalog-tab-js" href="#">Каталог товаров</a>
-            <ul class="catalog-menu">
-              <li class="catalog-menu__item">
-                <a href="#">Виртуальная реальность</a>
-              </li>
-              <li class="catalog-menu__item">
-                <a href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="catalog-menu__item">
-                <a href="#">Квадрокоптеры</a>
-              </li>
-              <li class="catalog-menu__item">
-                <a href="#">Моноподы для селфи</a>
-              </li>
-              <li class="catalog-menu__item">
-                <a href="#">Умные часы</a>
-              </li>
-              <li class="catalog-menu__item">
-                <a href="#">Экшн-камеры</a>
-              </li>
-            </ul>
+            <a class="nav-list__link big-link catalog-tab header-nav__catalog-tab catalog-tab-js" href="#">
+              Каталог товаров
+            </a>
+            <span class="catalog-tab__icon">&nbsp;</span>
+            <div class="catalog-menu js-catalog-menu">
+              <ul class="catalog-menu-list catalog-menu-col-1">
+                <li class="catalog-menu__item">
+                  <a class="catalog-menu__link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="catalog-menu__item">
+                  <a class="catalog-menu__link" href="#">Моноподы для селфи</a>
+                </li>
+                <li class="catalog-menu__item">
+                  <a class="catalog-menu__link" href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+
+              <ul class="catalog-menu-list catalog-menu-col-2">
+                <li class="catalog-menu__item">
+                  <a class="catalog-menu__link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="catalog-menu__item">
+                  <a class="catalog-menu__link" href="#">Умные часы</a>
+                </li>
+              </ul>
+
+              <ul class="catalog-menu-list catalog-menu-col-2">
+                <li class="catalog-menu__item">
+                  <a class="catalog-menu__link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="catalog-menu__item">
+                  <a class="catalog-menu__link" href="#">Умные часы</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__link big-link" href="#">Доставка</a>
+            <a class="nav-list__link big-link js-catalog-menu-nav-end" href="#">Доставка</a>
           </li>
           <li class="nav-list__item">
             <a class="nav-list__link big-link" href="#">Гарантия</a>
@@ -122,12 +136,13 @@
 
         <div class="wrapper cta-toggles-wrapper">
 
-          <a href="#" class="big-link big-link--strike">Подробнее</a>
+          <a href="#" class="big-link big-link-strike">Подробнее</a>
           <ul class="featured-items-toggles-list">
             <li class="featured-items-toggles-list__item">
               <label class="featured-items-toggles-list__item-label">
                 <span class="visually-hidden">Товар 1</span>
-                <input class="featured-items-toggles-list__input" type="radio" checked name="featured-items-slider"
+                <input data-check-idx="1" class="featured-items-toggles-list__input" type="radio" checked
+                       name="featured-items-slider"
                        value="item-1">
                 <span class="featured-items-toggles-list__toggle"></span>
               </label>
@@ -135,14 +150,18 @@
             <li class="featured-items-toggles-list__item">
               <label class="featured-items-toggles-list__item-label">
                 <span class="visually-hidden">Товар 2</span>
-                <input class="featured-items-toggles-list__input" type="radio" name="featured-items-slider" value="item-2">
+                <input data-check-idx="2" class="featured-items-toggles-list__input" type="radio"
+                       name="featured-items-slider"
+                        value="item-2">
                 <span class="featured-items-toggles-list__toggle"></span>
               </label>
             </li>
             <li class="featured-items-toggles-list__item">
               <label class="featured-items-toggles-list__item-label">
                 <span class="visually-hidden">Товар 3</span>
-                <input class="featured-items-toggles-list__input" type="radio" name="featured-items-slider" value="item-3">
+                <input data-check-idx="3" class="featured-items-toggles-list__input" type="radio"
+                       name="featured-items-slider"
+                        value="item-3">
                 <span class="featured-items-toggles-list__toggle"></span>
               </label>
             </li>
@@ -227,18 +246,21 @@
   </section>
 
   <section class="features">
-    <div class="container">
+    <div class="container features__container">
       <h2 class="visually-hidden">Наши преимущества</h2>
 
       <ul class="features__features-list">
-        <li class="features-list__item features-list__item--active">
-          <button class="clear-btn big-link features-list-item__btn-1">Доставка</button>
+        <li class="features-list__item features-list__item--active" data-tab-idx="1">
+          <button class="clear-btn big-link features-list-item__btn features-list-item__btn-1">Доставка
+          </button>
         </li>
-        <li class="features-list__item">
-          <button class="clear-btn big-link features-list-item__btn-2">Гарантия</button>
+        <li class="features-list__item" data-tab-idx="2">
+          <button class="clear-btn big-link features-list-item__btn features-list-item__btn-2">
+            Гарантия</button>
         </li>
-        <li class="features-list__item">
-          <button class="clear-btn big-link features-list-item__btn-3">Кредит</button>
+        <li class="features-list__item" data-tab-idx="3">
+          <button class="clear-btn big-link features-list-item__btn features-list-item__btn-3">
+            Кредит</button>
         </li>
       </ul>
       <section class="features-list-active-item-desc">
@@ -294,19 +316,19 @@
         Мы можем доставить ваш товар в самые отдаленные точки России!
         DEVICE работает со многими транспортными компаниями:
       </p>
-      <ul class="list about-us__delivery-list">
-        <li class="list__item">
+      <ul class="list about-us-delivery-list about-us__delivery-list">
+        <li class="list__item about-us-delivery-list__item">
           <b>Деловые Линии</b>
         </li>
-        <li class="list__item">
+        <li class="list__item about-us-delivery-list__item">
           <b>Автотрейдинг</b>
         </li>
-        <li class="list__item">
+        <li class="list__item about-us-delivery-list__item">
           <b>ЖелДорЭкспедиция</b>
         </li>
       </ul>
 
-      <a href="#" class="big-link big-link--strike about-us__cta-link">Подробнее о нас</a>
+      <a href="#" class="big-link big-link-strike">Подробнее о нас</a>
     </section>
 
     <section class="contacts">
@@ -319,7 +341,7 @@
 
       <img class="contacts__map" src="img/map.jpg" alt="Ул. Большая Конюшенная 18">
 
-      <a href="#" class="big-link big-link--strike contacts__cta-link">Напишите нам</a>
+      <a href="#" class="big-link big-link-strike contacts__cta-link">Напишите нам</a>
     </section>
   </div>
 </main>
