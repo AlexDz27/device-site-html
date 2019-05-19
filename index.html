@@ -26,14 +26,14 @@
       <div class="wrapper header-nav__interactions">
 
         <div class="interactions__wrapper">
-          <form class="search-form header__search-form header__search-form-js" method="get"
+          <form class="search-form" method="get"
                 action="index.html">
             <button class="search-form__btn-icon" type="submit">
               <span class="visually-hidden">Поиск</span>
             </button>
-            <input class="search-form__input header__search-form-input-js" name="search" id="search"
+            <input class="search-form__input" name="search" id="search"
                    placeholder="Поиск по сайту">
-            <button class="search-form__btn search-form__btn--unactive" type="submit">Найти</button>
+            <button class="search-form__btn search-form__btn--inactive" type="submit">Найти</button>
           </form>
         </div>
 
@@ -55,58 +55,55 @@
 
       </div>
 
-      <div class="wrapper">
+      <ul class="nav-list header-nav__nav-list">
+        <li class="nav-list__item catalog-tab-wrapper">
+          <a class="nav-list__link big-link catalog-tab header-nav__catalog-tab catalog-tab-js" href="#">
+            Каталог товаров
+          </a>
+          <span class="catalog-tab__icon">&nbsp;</span>
+          <div class="catalog-menu">
+              <ul class="catalog-menu__list">
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">Моноподы для селфи</a>
+              </li>
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">Экшн-камеры</a>
+              </li>
+            </ul>
 
-        <ul class="nav-list header-nav__nav-list-wrapper">
-          <li class="nav-list__item catalog-tab-wrapper">
-            <a class="nav-list__link big-link catalog-tab header-nav__catalog-tab catalog-tab-js" href="#">
-              Каталог товаров
-            </a>
-            <span class="catalog-tab__icon">&nbsp;</span>
-            <div class="catalog-menu js-catalog-menu">
-              <ul class="catalog-menu-list catalog-menu-col-1">
-                <li class="catalog-menu__item">
-                  <a class="catalog-menu__link" href="#">Виртуальная реальность</a>
-                </li>
-                <li class="catalog-menu__item">
-                  <a class="catalog-menu__link" href="#">Моноподы для селфи</a>
-                </li>
-                <li class="catalog-menu__item">
-                  <a class="catalog-menu__link" href="#">Экшн-камеры</a>
-                </li>
-              </ul>
+            <ul class="catalog-menu__list">
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">Умные часы</a>
+              </li>
+            </ul>
 
-              <ul class="catalog-menu-list catalog-menu-col-2">
-                <li class="catalog-menu__item">
-                  <a class="catalog-menu__link" href="#">Фитнес-браслеты</a>
-                </li>
-                <li class="catalog-menu__item">
-                  <a class="catalog-menu__link" href="#">Умные часы</a>
-                </li>
-              </ul>
+            <ul class="catalog-menu__list">
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-menu__item">
+                <a class="catalog-menu__link" href="#">Умные часы</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link big-link js-catalog-menu-nav-end" href="#">Доставка</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link big-link" href="#">Гарантия</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link big-link" href="#">Контакты</a>
+        </li>
+      </ul>
 
-              <ul class="catalog-menu-list catalog-menu-col-2">
-                <li class="catalog-menu__item">
-                  <a class="catalog-menu__link" href="#">Фитнес-браслеты</a>
-                </li>
-                <li class="catalog-menu__item">
-                  <a class="catalog-menu__link" href="#">Умные часы</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link big-link js-catalog-menu-nav-end" href="#">Доставка</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link big-link" href="#">Гарантия</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link big-link" href="#">Контакты</a>
-          </li>
-        </ul>
-
-      </div>
     </nav>
   </div>
 </header>
@@ -125,9 +122,9 @@
 
         <ul class="featured-items-list">
           <li class="featured-items-list__item">
-            <span class="featured-items-list__count">01</span>
-            <b class="featured-items-list__cta">Делай селфи,<br> как Бен Стиллер!</b>
-            <p class="featured-items-list__desc">
+            <span class="featured-items__item-count">01</span>
+            <b class="featured-items__item-cta">Делай селфи,<br> как Бен Стиллер!</b>
+            <p class="featured-items__item-desc">
               Самая длинная палка для селфи доступна в нашем магазине.
               Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
             </p>
@@ -249,23 +246,27 @@
     <div class="container features__container">
       <h2 class="visually-hidden">Наши преимущества</h2>
 
-      <ul class="features__features-list">
+      <ul class="features-list">
         <li class="features-list__item features-list__item--active" data-tab-idx="1">
-          <button class="clear-btn big-link features-list-item__btn features-list-item__btn-1">Доставка
+          <button class="clear-btn big-link features-list-item__btn features-list-item__btn-1">
+            Доставка
           </button>
         </li>
         <li class="features-list__item" data-tab-idx="2">
           <button class="clear-btn big-link features-list-item__btn features-list-item__btn-2">
-            Гарантия</button>
+            Гарантия
+          </button>
         </li>
         <li class="features-list__item" data-tab-idx="3">
           <button class="clear-btn big-link features-list-item__btn features-list-item__btn-3">
-            Кредит</button>
+            Кредит
+          </button>
         </li>
       </ul>
-      <section class="features-list-active-item-desc">
-        <h3 class="features-list-active-item-desc__title">Доставка</h3>
-        <p class="features-list-active-item-desc__desc">
+
+      <section class="features__active-item-desc">
+        <h3 class="features__active-item-desc-title">Доставка</h3>
+        <p class="features__active-item-desc-desc">
           Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
           бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж
         </p>
@@ -341,7 +342,7 @@
 
       <img class="contacts__map" src="img/map.jpg" alt="Ул. Большая Конюшенная 18">
 
-      <a href="#" class="big-link big-link-strike contacts__cta-link">Напишите нам</a>
+      <button type="button" class="big-link big-link-strike contacts__cta-btn">Напишите нам</button>
     </section>
   </div>
 </main>
@@ -409,6 +410,34 @@
     </div>
   </div>
 </footer>
+
+<!-- Modals -->
+
+<div class="overlay overlay--inactive"></div>
+
+<section class="write-us write-us--inactive">
+  <button class="write-us__close-btn" type="button"><span class="visually-hidden">Закрыть</span></button>
+  <form method="post" class="form">
+    <div class="form__labels-container">
+      <label class="form__label">
+        <span class="form-label__title">Ваше имя:</span>
+        <input class="form-label__input input" type="text" name="name" placeholder="Имя Фамилия" required>
+      </label>
+
+      <label class="form__label">
+        <span class="form-label__title">Ваш e-mail:</span>
+        <input class="form-label__input input" type="email" name="email" placeholder="email@example.com" required>
+      </label>
+
+      <label class="form__label form__textarea-label">
+        <span class="form-label__title">Текст письма:</span>
+        <textarea class="form-label__textarea input" name="message" placeholder="В свободной форме" required></textarea>
+      </label>
+    </div>
+
+    <button type="submit" class="big-link big-link-strike">Отправить</button>
+  </form>
+</section>
 
 <script src="js/scripts.js"></script>
 </body>
