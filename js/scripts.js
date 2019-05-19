@@ -2,26 +2,26 @@
 ;(function () {
   var searchForm = document.querySelector('.header__search-form-js');
   var searchFormInput = searchForm.querySelector('.header__search-form-input-js');
+  var searchFormBtnIcon = searchForm.querySelector('.search-form__btn-icon');
   var searchFormBtn = searchForm.querySelector('.search-form__btn');
 
-  searchFormInput.addEventListener('focus', handleSearchFormActivation);
+  searchFormBtnIcon.addEventListener('focus', activateSearchForm);
+  searchFormBtnIcon.addEventListener('focusout', function (evt) {
+    evt.relatedTarget === searchFormInput ? activateSearchForm() : deactivateSearchForm();
+  });
+  searchFormInput.addEventListener('focus', activateSearchForm);
   searchFormInput.addEventListener('focusout', function (evt) {
-    if (evt.relatedTarget === searchFormBtn) {
-      handleSearchFormActivation();
-    }
+    evt.relatedTarget === searchFormBtn ? activateSearchForm() : deactivateSearchForm();
   });
   searchFormBtn.addEventListener('focusout', function () {
-    handleSearchFormDeactivation();
+    deactivateSearchForm();
   });
-  searchFormInput.addEventListener('blur', handleSearchFormDeactivation);
-  searchFormBtn.addEventListener('mouseover', handleSearchFormActivation);
-  searchFormBtn.addEventListener('mouseout', handleSearchFormDeactivation);
 
-  function handleSearchFormActivation() {
+  function activateSearchForm() {
     searchForm.classList.add('header__search-form--active');
     searchFormBtn.classList.add('search-form__btn--active');
   }
-  function handleSearchFormDeactivation() {
+  function deactivateSearchForm() {
     searchForm.classList.remove('header__search-form--active');
     searchFormBtn.classList.remove('search-form__btn--active');
   }
@@ -108,8 +108,6 @@ function FeaturedItemsSliderManager() {
       this.infoTitles.innerHTML += '<th>' + info.title + '</th>';
       this.infoValues.innerHTML += '<td>' + info.value + '</td>';
     }.bind(this));
-
-    console.log(activeCheckboxIdx);
   }.bind(this);
 
   this.checkboxes.forEach(function (checkbox) {
