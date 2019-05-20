@@ -213,14 +213,21 @@
     this.overlay = document.querySelector('.overlay');
     this.modal = document.querySelector('.write-us');
     this.modalCloseBtn = document.querySelector('.write-us__close-btn');
+    this.nameInput = this.modal.querySelector('input[name="name"]');
 
     var activateModal = function () {
-      this.overlay.classList.remove('overlay--inactive');
-      this.modal.classList.remove('write-us--inactive');
+      this.overlay.classList.add('overlay--active');
+
+      this.modal.classList.remove('write-us--disappear-anim');
+      this.modal.classList.add('write-us--appear-anim');
+
+      this.nameInput.focus();
     }.bind(this);
     var deactivateModal = function () {
-      this.overlay.classList.add('overlay--inactive');
-      this.modal.classList.add('write-us--inactive');
+      this.overlay.classList.remove('overlay--active');
+
+      this.modal.classList.remove('write-us--appear-anim');
+      this.modal.classList.add('write-us--disappear-anim');
     }.bind(this);
 
     var deactivateModalOnEsc = function (evt) {
