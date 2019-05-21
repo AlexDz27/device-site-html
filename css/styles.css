@@ -996,9 +996,6 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 0 10px 3px rgba(0,0,0,0.25);
   transition: transform .6s;
 }
-/*.write-us--inactive {*/
-  /*display: none;*/
-/*}*/
 
 .write-us--active {
   transform: translate(-50%, -50%)
