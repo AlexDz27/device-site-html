@@ -811,6 +811,7 @@ input[type="radio"].visually-hidden {
   opacity: 0;
   position: absolute;
   top: 0;
+  left: 0;
 }
 .companies-list__item-link:hover img:last-child {
   opacity: 1;
